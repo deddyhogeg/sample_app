@@ -2,10 +2,13 @@ SampleApp::Application.routes.draw do
 
   get "users/new"
 
+# David's explanation:
+# match '/about', to: 'static_pages#about'
+# matches ’/about’ and routes it to the about action in the StaticPages controller
   match '/signup',  to: 'users#new'
   
   match '/help',    to: 'static_pages#help'
-  match '/about',   to: 'static_pages#about'
+  match '/about',   to: 'static_pages#about' 
   match '/contact', to: 'static_pages#contact'
 
   root to:'static_pages#home'
